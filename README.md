@@ -1,4 +1,4 @@
-# DBMS2019
+# GROUP 23 DBMS project 2019
 
 **Check point 1**
 
