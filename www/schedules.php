@@ -1,4 +1,5 @@
 <?php include("includes/a_config.php");?>
+<?php include("includes/connectionSettings.php");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,24 +14,9 @@
 	<h2>Schedules</h2>
 	<p>
 	<?php
-		$connection = oci_connect($username = 'psaikia',
-								  $password = 'wels@AINU14',
-								  $connection_string = '//oracle.cise.ufl.edu/orcl');
 		$statement = oci_parse($connection, 'SELECT T1.TEAM_NAME as TN1,T2.TEAM_NAME as TN2,G.DATETIME as DT,G.VENUE FROM GAME G, TEAM T1, TEAM T2 WHERE G.AWAYTEAM_ID = T1.TEAM_ID AND G.HOMETEAM_ID = T2.TEAM_ID');
 		oci_execute($statement);
 
-		//while (($row = oci_fetch_object($statement))) {
-		//  var_dump($row);
-		//}
-		
-		//echo "Home Team \t Away Team \t Date and time \t Venue <br>\n";
-		//while (oci_fetch($statement)) {
-		//	echo oci_result($statement, 'TN2'). "\t";
-		//	echo oci_result($statement, 'TN1'). "\t";
-		//	echo oci_result($statement, 'DT'). "\t";
-		//	echo oci_result($statement, 'VENUE'). "<br>\n";
-		//	//echo oci_result($stid, 'CITY') . "<br>\n";
-		//}
 		echo "<table border=\"1\">\n";
 		echo "<tr>";
 		echo "<th>Home Team</th>";
