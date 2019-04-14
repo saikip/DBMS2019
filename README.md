@@ -10,6 +10,6 @@ Front end:
 1. Install Wamp in local system
 2. Replace the php.ini with our php.ini file.
 3. Make sure oci8 is checked in php extensions.
-4. Now download the web pages from www folder to local system
-5. make sure you are connected to vpn and to cise oracle database where the tables exists
+4. Download the web pages from www folder to local system
+5. Make sure you are connected to vpn and to cise oracle database where the tables exists
 6. Go to http://localhost/
