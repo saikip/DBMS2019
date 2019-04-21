@@ -1,5 +1,5 @@
 <?php include("includes/a_config.php");?>
-<?php include("includes/navigation.php");?>
+<?php include("includes/connectionSettings.php");?>
 <!DOCTYPE html>
 <html>
 <head>
