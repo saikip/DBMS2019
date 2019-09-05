@@ -10,10 +10,13 @@
 	    <a class="nav-link <?php if ($CURRENT_PAGE == "Rankings") {?>active<?php }?>" href="rankings.php">Rankings</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link <?php if ($CURRENT_PAGE == "Scores") {?>active<?php }?>" href="teams.php">Scores</a>
+	    <a class="nav-link <?php if ($CURRENT_PAGE == "Scores") {?>active<?php }?>" href="scores.php">Scores</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link <?php if ($CURRENT_PAGE == "Teams") {?>active<?php }?>" href="teams.php">Teams</a>
+	    <a class="nav-link <?php if ($CURRENT_PAGE == "Teams") {?>active<?php }?>" href="teams.php">Insights</a>
+		</li>
+		<li class="nav-item">
+	    <a class="nav-link <?php if ($CURRENT_PAGE == "Trends") {?>active<?php }?>" href="trends.php">Trends</a>
 	  </li>
 	</ul>
 </div>

@@ -1,20 +1,24 @@
 <?php
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/php-template/schedules.php":
+		case "/schedules.php":
 			$CURRENT_PAGE = "Schedules"; 
 			$PAGE_TITLE = "Schedules";
 			break;
-		case "/php-template/rankings.php":
+		case "/rankings.php":
 			$CURRENT_PAGE = "Rankings"; 
 			$PAGE_TITLE = "Rankings";
 			break;
-		case "/php-template/scores.php":
+		case "/scores.php":
 			$CURRENT_PAGE = "Scores"; 
 			$PAGE_TITLE = "Teams";
 			break;
-		case "/php-template/teams.php":
+		case "/teams.php":
 			$CURRENT_PAGE = "Teams"; 
 			$PAGE_TITLE = "Teams";
+			break;
+		case "/trends.php":
+			$CURRENT_PAGE = "Trends"; 
+			$PAGE_TITLE = "Trends";
 			break;
 		default:
 			$CURRENT_PAGE = "Index";
