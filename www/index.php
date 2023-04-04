@@ -2,44 +2,50 @@
 <?php include("includes/connectionSettings.php");?>
 <!DOCTYPE html>
 <html>
+
 <head>
-	<?php include("includes/head-tag-contents.php");?>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="/resources/demos/style.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script type="text/javascript" src="http://services.iperfect.net/js/IP_generalLib.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <?php include("includes/head-tag-contents.php");?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://services.iperfect.net/js/IP_generalLib.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<?php include("includes/design-top.php");?>
-<?php include("includes/navigation.php");?>
-<form method="post">
-<div class="container" id="main-content">
-	<h2>Welcome to the NHL information system!</h2>
-	<p>
-		This website consists of information about the National Hockey League.
-		The National Hockey League is a professional ice hockey league in North America,
-		currently comprising of 31 teams: 24 in the United States and 7 in Canada. The 
-		NHL is considered to be the premier professional ice hockey league in the world, 
-		and one of the major professional sports leagues in the United States and Canada 
-		with a huge fan base.
-	</p>
-	<h3>THE BEST RIGHT NOW!</h3>
-	<p>
-		<input type="submit" name="bestTeambyWins" value="Best Team by most wins" class="btn btn-info btn-rounded" onclick="bestTeambyWins()" />	
-	
-		<input type="submit" name="bestTeambyGoals" value="Best Team by most goals" class="btn btn-info btn-rounded" onclick="bestTeambyGoals()" />	
-	
-		<input type="submit" name="bestSkaterGoals" value="Best Skater" class="btn btn-info btn-rounded" onclick="bestSkaterGoals()" />	
-	
-		<input type="submit" name="bestGoalieSaves" value="Best Goalies" class="btn btn-info btn-rounded" onclick="bestGoalieSaves()" />	
-	</p>
-	<p>
-		<?php
+    <?php include("includes/design-top.php");?>
+    <?php include("includes/navigation.php");?>
+    <form method="post">
+        <div class="container" id="main-content">
+            <h2>Welcome to the NHL information system!</h2>
+            <p>
+                This website consists of information about the National Hockey League.
+                The National Hockey League is a professional ice hockey league in North America,
+                currently comprising of 31 teams: 24 in the United States and 7 in Canada. The
+                NHL is considered to be the premier professional ice hockey league in the world,
+                and one of the major professional sports leagues in the United States and Canada
+                with a huge fan base.
+            </p>
+            <h3>THE BEST RIGHT NOW!</h3>
+            <p>
+                <input type="submit" name="bestTeambyWins" value="Best Team by most wins"
+                    class="btn btn-info btn-rounded" onclick="bestTeambyWins()" />
+
+                <input type="submit" name="bestTeambyGoals" value="Best Team by most goals"
+                    class="btn btn-info btn-rounded" onclick="bestTeambyGoals()" />
+
+                <input type="submit" name="bestSkaterGoals" value="Best Skater" class="btn btn-info btn-rounded"
+                    onclick="bestSkaterGoals()" />
+
+                <input type="submit" name="bestGoalieSaves" value="Best Goalies" class="btn btn-info btn-rounded"
+                    onclick="bestGoalieSaves()" />
+            </p>
+            <p>
+                <?php
 			// GET SQL QUERY AS PER USER REQUESTS
 			// ---------------------------------------------------
 			if(array_key_exists('bestTeambyWins',$_POST)){
@@ -145,10 +151,11 @@
 				oci_close($connection);
 			}
 		?>
-	</p>
-</div>
-</form>
-<?php include("includes/footer.php");?>
+            </p>
+        </div>
+    </form>
+    <?php include("includes/footer.php");?>
 
 </body>
+
 </html>
